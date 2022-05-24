@@ -9,6 +9,7 @@ module.exports = {
         image: 'ashtanga.jpg',
         body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         published: '2020-01-08 15:02:30',
+        author_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }]),
@@ -18,6 +19,7 @@ module.exports = {
         image: 'morning.jpg',
         body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         published: '2020-04-14 15:02:41',
+        author_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }]),
@@ -27,13 +29,14 @@ module.exports = {
         image: 'yoga-teacher.jpg',
         body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         published: '2020-05-28 15:02:55',
+        author_id: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       }]),
     ])
   },
 
-  down: (queryInterface, Sequelize) => {
+  async down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('Articles', null, {});
   }
 };
